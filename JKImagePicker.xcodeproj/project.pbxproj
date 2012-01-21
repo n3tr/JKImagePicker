@@ -63,7 +63,6 @@
 		6AFD6CB714CB2373009B5B7B = {
 			isa = PBXGroup;
 			children = (
-				6AFD6CE814CB2413009B5B7B /* Image Picker and Cell */,
 				6AFD6CCC14CB2373009B5B7B /* JKImagePicker */,
 				6AFD6CC514CB2373009B5B7B /* Frameworks */,
 				6AFD6CC314CB2373009B5B7B /* Products */,
@@ -91,6 +90,7 @@
 		6AFD6CCC14CB2373009B5B7B /* JKImagePicker */ = {
 			isa = PBXGroup;
 			children = (
+				6AFD6CE814CB2413009B5B7B /* Image Picker and Cell */,
 				6AFD6CD514CB2373009B5B7B /* AppDelegate.h */,
 				6AFD6CD614CB2373009B5B7B /* AppDelegate.m */,
 				6AFD6CD814CB2373009B5B7B /* ViewController.h */,
@@ -125,6 +125,7 @@
 				6AFD6CEF14CB26C7009B5B7B /* JKThumbnailImageView.m */,
 			);
 			name = "Image Picker and Cell";
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,6 +308,7 @@
 				6AFD6CE214CB2373009B5B7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
