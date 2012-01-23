@@ -19,11 +19,15 @@
 @interface JKThumbnailImageView : UIImageView
 {
     UIImageView *highlightView;
+    UIImageView *selectionView;
     id<JKThumbnailImageViewDelegate> delegate;
+    BOOL isSelectable;
 }
 
 @property (nonatomic, retain) id<JKThumbnailImageViewDelegate> delegate;
+@property (nonatomic, assign) BOOL isSelectable;
 
 - (void)clearSelection;
+- (void)clearHighlight;
 
 @end

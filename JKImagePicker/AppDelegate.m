@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 #import "ViewController.h"
+#import "JKImagePickerController.h"
 
 @implementation AppDelegate
 
@@ -26,8 +27,11 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-    self.viewController = [[[ViewController alloc] initWithNibName:@"ViewController" bundle:nil] autorelease];
-    self.window.rootViewController = self.viewController;
+    // self.viewController = [[[ViewController alloc] initWithNibName:@"ViewController" bundle:nil] autorelease];
+    
+    
+    JKImagePickerController *jkIP = [[JKImagePickerController alloc] initWithNibName:@"JKImagePickerController" bundle:nil];
+    self.window.rootViewController = jkIP;
     [self.window makeKeyAndVisible];
     return YES;
 }

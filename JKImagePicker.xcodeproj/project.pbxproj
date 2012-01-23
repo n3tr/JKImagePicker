@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A80326614CD282800814736 /* ThumbnailHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A80326514CD282800814736 /* ThumbnailHighlight.png */; };
+		6A80326814CD2B1D00814736 /* ThumbnailSelection.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A80326714CD2B1D00814736 /* ThumbnailSelection.png */; };
+		6A80326E14CD2F4A00814736 /* 1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6A80326A14CD2F4A00814736 /* 1.jpeg */; };
+		6A80326F14CD2F4A00814736 /* 2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6A80326B14CD2F4A00814736 /* 2.jpeg */; };
+		6A80327014CD2F4A00814736 /* 3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6A80326C14CD2F4A00814736 /* 3.jpeg */; };
+		6A80327114CD2F4A00814736 /* 4.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6A80326D14CD2F4A00814736 /* 4.jpeg */; };
+		6A80327414CD38C000814736 /* ThumbnailHighlight-70.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A80327214CD38C000814736 /* ThumbnailHighlight-70.png */; };
+		6A80327514CD38C000814736 /* ThumbnailSelection-70.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A80327314CD38C000814736 /* ThumbnailSelection-70.png */; };
 		6AFD6CC714CB2373009B5B7B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AFD6CC614CB2373009B5B7B /* UIKit.framework */; };
 		6AFD6CC914CB2373009B5B7B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AFD6CC814CB2373009B5B7B /* Foundation.framework */; };
 		6AFD6CCB14CB2373009B5B7B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AFD6CCA14CB2373009B5B7B /* CoreGraphics.framework */; };
@@ -23,6 +31,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A80326514CD282800814736 /* ThumbnailHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ThumbnailHighlight.png; sourceTree = "<group>"; };
+		6A80326714CD2B1D00814736 /* ThumbnailSelection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ThumbnailSelection.png; sourceTree = "<group>"; };
+		6A80326A14CD2F4A00814736 /* 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpeg; sourceTree = "<group>"; };
+		6A80326B14CD2F4A00814736 /* 2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpeg; sourceTree = "<group>"; };
+		6A80326C14CD2F4A00814736 /* 3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpeg; sourceTree = "<group>"; };
+		6A80326D14CD2F4A00814736 /* 4.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpeg; sourceTree = "<group>"; };
+		6A80327214CD38C000814736 /* ThumbnailHighlight-70.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ThumbnailHighlight-70.png"; sourceTree = "<group>"; };
+		6A80327314CD38C000814736 /* ThumbnailSelection-70.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ThumbnailSelection-70.png"; sourceTree = "<group>"; };
 		6AFD6CC214CB2373009B5B7B /* JKImagePicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JKImagePicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AFD6CC614CB2373009B5B7B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6AFD6CC814CB2373009B5B7B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -60,6 +76,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A80326314CD281C00814736 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				6A80327214CD38C000814736 /* ThumbnailHighlight-70.png */,
+				6A80327314CD38C000814736 /* ThumbnailSelection-70.png */,
+				6A80326714CD2B1D00814736 /* ThumbnailSelection.png */,
+				6A80326514CD282800814736 /* ThumbnailHighlight.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		6A80326914CD2F4A00814736 /* ThumbnailImages */ = {
+			isa = PBXGroup;
+			children = (
+				6A80326A14CD2F4A00814736 /* 1.jpeg */,
+				6A80326B14CD2F4A00814736 /* 2.jpeg */,
+				6A80326C14CD2F4A00814736 /* 3.jpeg */,
+				6A80326D14CD2F4A00814736 /* 4.jpeg */,
+			);
+			path = ThumbnailImages;
+			sourceTree = "<group>";
+		};
 		6AFD6CB714CB2373009B5B7B = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +153,8 @@
 		6AFD6CE814CB2413009B5B7B /* Image Picker and Cell */ = {
 			isa = PBXGroup;
 			children = (
+				6A80326914CD2F4A00814736 /* ThumbnailImages */,
+				6A80326314CD281C00814736 /* Images */,
 				6AFD6CE314CB2408009B5B7B /* JKImagePickerController.h */,
 				6AFD6CE414CB2408009B5B7B /* JKImagePickerController.m */,
 				6AFD6CE514CB2408009B5B7B /* JKImagePickerController.xib */,
@@ -183,6 +223,14 @@
 				6AFD6CDD14CB2373009B5B7B /* ViewController.xib in Resources */,
 				6AFD6CE714CB2408009B5B7B /* JKImagePickerController.xib in Resources */,
 				6AFD6CED14CB246E009B5B7B /* JKImagePickerCell.xib in Resources */,
+				6A80326614CD282800814736 /* ThumbnailHighlight.png in Resources */,
+				6A80326814CD2B1D00814736 /* ThumbnailSelection.png in Resources */,
+				6A80326E14CD2F4A00814736 /* 1.jpeg in Resources */,
+				6A80326F14CD2F4A00814736 /* 2.jpeg in Resources */,
+				6A80327014CD2F4A00814736 /* 3.jpeg in Resources */,
+				6A80327114CD2F4A00814736 /* 4.jpeg in Resources */,
+				6A80327414CD38C000814736 /* ThumbnailHighlight-70.png in Resources */,
+				6A80327514CD38C000814736 /* ThumbnailSelection-70.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

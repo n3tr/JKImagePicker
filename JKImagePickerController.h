@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JKImagePickerController : UITableViewController
+#import "JKImagePickerCell.h"
+
+@interface JKImagePickerController : UITableViewController <JKImagePickerCellDelegate>
+{
+     NSInteger lastSelectedRow;
+}
+@property (retain, nonatomic) IBOutlet JKImagePickerCell *tmpCell;
 
 @end

@@ -7,16 +7,14 @@
 //
 
 #import "JKImagePickerController.h"
+#import "JKImagePickerCell.h"
 
 @implementation JKImagePickerController
+@synthesize tmpCell;
 
-- (id)initWithStyle:(UITableViewStyle)style
+- (void)awakeFromNib
 {
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+    lastSelectedRow = NSNotFound;
 }
 
 - (void)didReceiveMemoryWarning
@@ -32,7 +30,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -42,6 +41,7 @@
 
 - (void)viewDidUnload
 {
+    [self setTmpCell:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -77,30 +77,72 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
+
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
+
     // Return the number of rows in the section.
-    return 0;
+    return 10;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"JKPickerCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    JKImagePickerCell *cell = (JKImagePickerCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        [[NSBundle mainBundle] loadNibNamed:@"JKImagePickerCell" owner:self options:nil];
+        cell = tmpCell;
+        tmpCell = nil;
     }
     
+    cell.rowNumber = indexPath.row;
+    cell.delegate = self;
+    
     // Configure the cell...
+    NSUInteger firstPhotoInCell = indexPath.row * 4;
+    NSUInteger lastPhotoInCell  = firstPhotoInCell + 4;
+    
+    NSUInteger currentPhotoIndex = 0;
+    NSUInteger lastPhotoIndex = MIN(lastPhotoInCell, 40);
+    for ( ; firstPhotoInCell + currentPhotoIndex < lastPhotoIndex ; currentPhotoIndex++) {
+        
+        
+       
+        
+        UIImage *thumbnail;
+        switch (currentPhotoIndex) {
+            case 0:
+                thumbnail = [UIImage imageNamed:@"1.jpeg"];
+                [cell photo1].image = thumbnail;
+                break;
+            case 1:
+                thumbnail = [UIImage imageNamed:@"2.jpeg"];
+                [cell photo2].image = thumbnail;
+                break;
+            case 2:
+                thumbnail = [UIImage imageNamed:@"3.jpeg"];
+                [cell photo3].image = thumbnail;
+                break;
+            case 3:
+                thumbnail = [UIImage imageNamed:@"4.jpeg"];
+                [cell photo4].image = thumbnail;
+                break;
+            default:
+                break;
+        }
+    }
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 78;
 }
 
 /*
@@ -156,4 +198,13 @@
      */
 }
 
+- (void)JKImagePickerCell:(JKImagePickerCell *)cell selectPhotoAtIndex:(NSInteger)index
+{
+    
+}
+
+- (void)dealloc {
+    [tmpCell release];
+    [super dealloc];
+}
 @end

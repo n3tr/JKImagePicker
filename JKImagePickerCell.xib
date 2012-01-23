@@ -45,9 +45,8 @@
 								<string key="NSFrame">{{8, 0}, {70, 70}}</string>
 								<reference key="NSSuperview" ref="730903635"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
+								<reference key="NSNextKeyView" ref="968851202"/>
 								<string key="NSReuseIdentifierKey">_NS:567</string>
-								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							</object>
 							<object class="IBUIImageView" id="968851202">
@@ -56,8 +55,8 @@
 								<string key="NSFrame">{{86, 0}, {70, 70}}</string>
 								<reference key="NSSuperview" ref="730903635"/>
 								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView" ref="188505812"/>
 								<string key="NSReuseIdentifierKey">_NS:567</string>
-								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							</object>
 							<object class="IBUIImageView" id="188505812">
@@ -66,8 +65,8 @@
 								<string key="NSFrame">{{164, 0}, {70, 70}}</string>
 								<reference key="NSSuperview" ref="730903635"/>
 								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView" ref="1004546407"/>
 								<string key="NSReuseIdentifierKey">_NS:567</string>
-								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							</object>
 							<object class="IBUIImageView" id="1004546407">
@@ -76,8 +75,8 @@
 								<string key="NSFrame">{{242, 0}, {70, 70}}</string>
 								<reference key="NSSuperview" ref="730903635"/>
 								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:567</string>
-								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							</object>
 						</array>
@@ -111,35 +110,43 @@
 			<array class="NSMutableArray" key="connectionRecords">
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">photo1</string>
+						<string key="label">tmpCell</string>
 						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="616539633"/>
+					</object>
+					<int key="connectionID">21</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">photo1</string>
+						<reference key="source" ref="616539633"/>
 						<reference key="destination" ref="188418967"/>
 					</object>
-					<int key="connectionID">16</int>
+					<int key="connectionID">22</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">photo2</string>
-						<reference key="source" ref="372490531"/>
+						<reference key="source" ref="616539633"/>
 						<reference key="destination" ref="968851202"/>
 					</object>
-					<int key="connectionID">17</int>
+					<int key="connectionID">23</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">photo3</string>
-						<reference key="source" ref="372490531"/>
+						<reference key="source" ref="616539633"/>
 						<reference key="destination" ref="188505812"/>
 					</object>
-					<int key="connectionID">18</int>
+					<int key="connectionID">24</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">photo4</string>
-						<reference key="source" ref="372490531"/>
+						<reference key="source" ref="616539633"/>
 						<reference key="destination" ref="1004546407"/>
 					</object>
-					<int key="connectionID">19</int>
+					<int key="connectionID">25</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -165,21 +172,16 @@
 						<int key="objectID">4</int>
 						<reference key="object" ref="616539633"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="188418967"/>
 							<reference ref="968851202"/>
 							<reference ref="188505812"/>
 							<reference ref="1004546407"/>
+							<reference ref="188418967"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">5</int>
-						<reference key="object" ref="188418967"/>
-						<reference key="parent" ref="616539633"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">13</int>
-						<reference key="object" ref="968851202"/>
+						<int key="objectID">15</int>
+						<reference key="object" ref="1004546407"/>
 						<reference key="parent" ref="616539633"/>
 					</object>
 					<object class="IBObjectRecord">
@@ -188,14 +190,19 @@
 						<reference key="parent" ref="616539633"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">15</int>
-						<reference key="object" ref="1004546407"/>
+						<int key="objectID">13</int>
+						<reference key="object" ref="968851202"/>
+						<reference key="parent" ref="616539633"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">5</int>
+						<reference key="object" ref="188418967"/>
 						<reference key="parent" ref="616539633"/>
 					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
-				<string key="-1.CustomClassName">JKImagePickerCell</string>
+				<string key="-1.CustomClassName">JKImagePickerController</string>
 				<string key="-1.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="-2.CustomClassName">UIResponder</string>
 				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -205,6 +212,7 @@
 				<string key="14.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="15.CustomClassName">JKThumbnailImageView</string>
 				<string key="15.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="4.CustomClassName">JKImagePickerCell</string>
 				<string key="4.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="5.CustomClassName">JKThumbnailImageView</string>
 				<string key="5.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -213,7 +221,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">19</int>
+			<int key="maxID">25</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -247,6 +255,25 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/JKImagePickerCell.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">JKImagePickerController</string>
+					<string key="superclassName">UITableViewController</string>
+					<object class="NSMutableDictionary" key="outlets">
+						<string key="NS.key.0">tmpCell</string>
+						<string key="NS.object.0">JKImagePickerCell</string>
+					</object>
+					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<string key="NS.key.0">tmpCell</string>
+						<object class="IBToOneOutletInfo" key="NS.object.0">
+							<string key="name">tmpCell</string>
+							<string key="candidateClassName">JKImagePickerCell</string>
+						</object>
+					</object>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/JKImagePickerController.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">

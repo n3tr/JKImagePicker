@@ -16,19 +16,22 @@
 
 @end
 
-@interface JKImagePickerCell : UITableViewCell
+@interface JKImagePickerCell : UITableViewCell <JKThumbnailImageViewDelegate>
 {
     id<JKImagePickerCellDelegate> delegate;
+    BOOL isSelectableMode;
+    NSUInteger rowNumber;
 }
 
 - (void)clearSelection;
+- (void)setSelectMode:(BOOL)selectableMode;
 
 @property (retain, nonatomic) IBOutlet JKThumbnailImageView *photo1;
 @property (retain, nonatomic) IBOutlet JKThumbnailImageView *photo2;
 @property (retain, nonatomic) IBOutlet JKThumbnailImageView *photo3;
 @property (retain, nonatomic) IBOutlet JKThumbnailImageView *photo4;
 
-
+@property (nonatomic, assign) NSUInteger rowNumber;
 @property (nonatomic, assign) id<JKImagePickerCellDelegate> delegate;
 
 @end
