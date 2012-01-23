@@ -11,7 +11,7 @@
 
 @implementation JKImagePickerController
 @synthesize tmpCell;
-
+@synthesize selectedIndexes;
 - (void)awakeFromNib
 {
     lastSelectedRow = NSNotFound;
@@ -37,6 +37,9 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    
+    selectedIndexes = [[NSMutableArray alloc] init];
 }
 
 - (void)viewDidUnload
@@ -102,6 +105,7 @@
     
     cell.rowNumber = indexPath.row;
     cell.delegate = self;
+    [cell setSelectMode:YES];
     
     // Configure the cell...
     NSUInteger firstPhotoInCell = indexPath.row * 4;
@@ -112,25 +116,43 @@
     for ( ; firstPhotoInCell + currentPhotoIndex < lastPhotoIndex ; currentPhotoIndex++) {
         
         
-       
+        NSNumber *photoIndex = [[NSNumber alloc] initWithInt:(indexPath.row * 4) + currentPhotoIndex];
         
         UIImage *thumbnail;
         switch (currentPhotoIndex) {
             case 0:
                 thumbnail = [UIImage imageNamed:@"1.jpeg"];
                 [cell photo1].image = thumbnail;
+                
+                if ([selectedIndexes containsObject:photoIndex]) {
+                    [cell.photo1 makeSelected:YES];
+                    
+                }
                 break;
             case 1:
                 thumbnail = [UIImage imageNamed:@"2.jpeg"];
                 [cell photo2].image = thumbnail;
+                
+                if ([selectedIndexes containsObject:photoIndex]) {
+                    [cell.photo2 makeSelected:YES];
+                    
+                }
                 break;
             case 2:
                 thumbnail = [UIImage imageNamed:@"3.jpeg"];
                 [cell photo3].image = thumbnail;
+                if ([selectedIndexes containsObject:photoIndex]) {
+                    [cell.photo3 makeSelected:YES];
+                }else{
+                    [cell.photo3 makeSelected:NO];
+                }
                 break;
             case 3:
                 thumbnail = [UIImage imageNamed:@"4.jpeg"];
                 [cell photo4].image = thumbnail;
+                if ([selectedIndexes containsObject:photoIndex]) {
+                    [cell.photo4 makeSelected:YES];
+                }
                 break;
             default:
                 break;
@@ -201,6 +223,17 @@
 - (void)JKImagePickerCell:(JKImagePickerCell *)cell selectPhotoAtIndex:(NSInteger)index
 {
     
+    NSInteger photoIndex = (cell.rowNumber * 4) + index;
+    if (![selectedIndexes containsObject:[NSNumber numberWithInteger:photoIndex]]) {
+        NSLog(@"Add %d",photoIndex);
+        [selectedIndexes addObject:[NSNumber numberWithInteger:photoIndex]];
+    }else{
+        [selectedIndexes removeObject:[NSNumber numberWithInteger:photoIndex
+                                       ]];
+        NSLog(@"Remove %d",photoIndex);
+    }
+    
+
 }
 
 - (void)dealloc {

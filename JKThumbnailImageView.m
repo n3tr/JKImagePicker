@@ -18,6 +18,7 @@
 
 @synthesize delegate;
 @synthesize isSelectable;
+@synthesize isSelected;
 
 
 - (void)dealloc
@@ -30,18 +31,38 @@
 #pragma -
 #pragma Touch Handing
 
+
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    NSLog(@"touch");
-    [self createHighlightImageView];
-    [self addSubview:highlightView];
+   
+   
+        [self createHighlightImageView];
+        [self addSubview:highlightView];
+    
     
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [delegate thumbnailImageViewWasSelected:self];
-    [highlightView removeFromSuperview];
+    if (!isSelectable) {
+        [delegate thumbnailImageViewWasSelected:self];
+        [highlightView removeFromSuperview];
+    }else{
+         [highlightView removeFromSuperview];
+        if (!isSelected) {
+            [self createSelectionImageView];
+            [self addSubview:selectionView];
+            isSelected = YES;
+        }else{
+            [selectionView removeFromSuperview];
+            isSelected = NO;
+        }
+        
+        [delegate thumbnailImageViewWasSelected:self];
+        
+    }
+    
 }
 
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
@@ -78,8 +99,26 @@
     if (!selectionView) {
         UIImage *thumbnailSelection = [UIImage imageNamed:@"ThumbnailSelection-70"];
         selectionView = [[UIImageView alloc] initWithImage:thumbnailSelection];
+        
         [selectionView setAlpha: 0.5];
     }
 }
+
+- (void)makeSelected:(BOOL)newSelected
+{
+    if (newSelected) {
+        [self createSelectionImageView];
+        [self addSubview:selectionView];
+        isSelected = YES;
+    }else{
+        [selectionView removeFromSuperview];
+        isSelected = NO;
+    }
+    
+    //[self setNeedsLayout];
+   
+    
+}
+
 
 @end

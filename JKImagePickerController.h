@@ -12,8 +12,11 @@
 
 @interface JKImagePickerController : UITableViewController <JKImagePickerCellDelegate>
 {
-     NSInteger lastSelectedRow;
+    NSInteger lastSelectedRow;
+    NSMutableArray *selectedIndexes;
 }
 @property (retain, nonatomic) IBOutlet JKImagePickerCell *tmpCell;
+
+@property (nonatomic, retain) NSMutableArray *selectedIndexes;
 
 @end

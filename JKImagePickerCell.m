@@ -51,6 +51,7 @@
     [photo4 clearHighlight];
 }
 
+
 - (void)setSelectMode:(BOOL)selectableMode
 {
     [photo1 setIsSelectable:selectableMode];

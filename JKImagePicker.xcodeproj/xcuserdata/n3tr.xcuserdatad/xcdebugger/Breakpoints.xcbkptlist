@@ -9,11 +9,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "JKImagePickerController.h"
-         timestampString = "348992527.973885"
+         timestampString = "349021479.590881"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "19"
-         endingLineNumber = "19"
+         startingLineNumber = "22"
+         endingLineNumber = "22"
          landmarkName = "@interface JKImagePickerController"
          landmarkType = "2">
       </FileBreakpoint>
@@ -43,6 +43,34 @@
          startingLineNumber = "39"
          endingLineNumber = "39"
          landmarkName = "-clearSelection"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "JKThumbnailImageView.m"
+         timestampString = "349034216.454837"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "110"
+         endingLineNumber = "110"
+         landmarkName = "-makeSelected:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "JKImagePickerController.m"
+         timestampString = "349041187.473835"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "230"
+         endingLineNumber = "230"
+         landmarkName = "-JKImagePickerCell:selectPhotoAtIndex:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
